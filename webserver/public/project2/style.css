@@ -1,0 +1,158 @@
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+   }
+   
+   
+   canvas {
+    width: 100%;
+    height: 100%;
+    display: none; /* Hide initially */
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    transition: all 1s linear;
+   }
+   
+   
+   .container {
+    display: flex;
+    text-align: center;
+    display: inline-block;
+    /* justify-content: center; */
+    /* align-content: center; */
+    flex-direction: column;
+    margin-top: 130px;
+   }
+   
+   
+   h1 {
+    font-family: "Chakra Petch", sans-serif;
+    color: rgb(124, 124, 124);
+    text-align: center;
+    font-size: 70px;
+    /* display: none; */
+    font-weight: normal;
+    transition: all 0.8s ease-in-out;
+   }
+   
+   
+   #visual_content {
+    display: flex;
+    justify-content: center;
+    z-index: 10; /* Make sure it's above the canvas */
+    position: absolute; /* Ensures transform works properly */
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1.5s linear; /* Smooth fade-in effect */
+   }
+   
+   
+   #herzclock {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 30px;
+    /* margin-left: 8px; */
+    transition: opacity 0.8s ease-in-out, visibility 0s 0.6s;
+    /* visibility: visible;  */
+   }
+   
+   
+   #clock_face {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: radial-gradient(circle, yellow 0%, rgba(255, 255, 0, 0) 100%);
+    /* background-color: rgb(255, 255, 116); */
+    z-index: 10; /* Make sure it's above the canvas */
+    top: 0;
+    left: 0;
+    transition: all 1.5s ease-in-out;
+   }
+   
+   
+   #btn {
+    width: auto;
+    display: inline-block;
+    max-width: 100px;
+    text-align: center;
+    padding: 14px 36px;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 40px;
+    /* font-weight: bold; */
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border: rgb(0, 0, 0);
+    border-radius: 60px;
+    box-shadow: 0px 0px 16px rgba(30, 11, 123, 0.592);
+    transition: transform 1s ease-in-out, background-color 0.3s linear, font-size 1.5s ease, padding 1s ease;
+   }
+   
+   
+   #btn:hover {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    transform: scale(1.05);
+   }
+   
+   
+   #openPopup{
+      display: none;
+      position: absolute;
+      font-size: 20px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-right: 10px;
+      padding-left: 10px;
+      top: 10%;
+      left: 93%;
+      background: white;
+      box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.151);
+      border-radius: 30px;
+      opacity: 0;
+      transition: opacity 1.5s linear; /* Smooth fade-in effect */
+   }
+   .popup {
+      position: absolute;
+      font-family:"Chakra Petch", sans-serif;
+      top: 20%;
+      left: 74%;
+      transform: translate(-10%, -50%);
+      width: 300px;
+      padding-top: 0px;
+      padding-right: 28px;
+      padding-left: 28px;
+      padding-bottom: 28px;
+      background: white;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+      display: none; /* Initially hidden */
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 10px;
+      text-align: center;
+    }
+   
+   
+    p{
+      margin: 0;
+    }
+     .popup-content {
+      position: relative;
+      margin: 0;
+      max-height: 100px;
+    }
+     .close {
+      position: relative;
+      top: 3px;
+      left: 154px;
+      font-size: 25px;
+      cursor: pointer;
+    }
+     .popup.show {
+      display: block;
+      opacity: 1;
+    }
+   
