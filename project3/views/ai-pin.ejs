@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <title>AI Pin</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mingzat&family=Pontano+Sans:wght@300..700&family=Zen+Kaku+Gothic+Antique&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="<%= bgClass %>">
+    <%- include('header.ejs', { }); %>
+
+    <div class="about-container">
+      <div class="about-content">
+        <h2>AI Pin</h2>
+          
+          <img src="/images/ai-pin.png" alt="About" width="300px" />
+         
+         <p>
+          Reddot winner 2024 - the AI pin by 
+          <a href="https://humane.com/">Humane</a>
+          <br>
+          <p><strong>HP actually acquired Humane's AI capabilities as of February 2025</strong> for their own emerging experiments,
+         it's a good artifact for considering, but the AI pin is in fact no more.
+         </p>
+         <img src="/images/pin_pinned.png" alt="About" width="550px" />
+         <br>
+         <p>
+          It has 
+          <em>most</em>
+          functions of a phone - call, text, photos videos, music - no additional apps really. 
+          But this crafted - <strong>hands free</strong> - interface interaction 
+        along with integrated AI and camera use is what makes it especially unique and appealing.</p>
+          <br>
+          <img src="/images/snowboard-pin.jpg" alt="About" width="450px" />
+          <br>
+          <video 
+          src="https://bgtyb5tggz7dcsgj.public.blob.vercel-storage.com/snowboardvideo_1_720p.mp4"
+          poster="https://cdn.sanity.io/images/cbbhbarr/production/33875fbaf808ffd155e17cdbf822e17d683cd1a0-3200x2400.jpg"
+          width="550"
+          preload="none"
+          playsinline
+          autoplay
+          loop
+          muted
+        >
+          Your browser does not support the video tag.
+        </video>
+                  <br>
+                  <p>
+        It can be magnetically pinned to your clothing and is 
+          mainly facilitated vocally
+           using your AI assistant - supported in at least 48 languages - 
+         allowing special functions that go beyond most phones capabilities.</p>
+        <br>
+        <img src="/images/ai_pin_rec2.png" alt="About" width="650px" />
+        <br>
+
+        <p>It has a touchpad for manual controls such as answering calls, maneuvering music tracks, and volume.</p>
+        <br>
+        <img src="/images/ai_pin_touch.png" alt="About" width="650px" />
+        <br>
+        
+        <p>It also has a laser ink display for specific instances where you may need a interface to interact with-
+          you just have to lift your hand in front of your pin for it to project onto.
+        </p>
+        <br>
+        <a href="https://www.inverse.com/tech/humane-ai-pin-in-depth-review">
+          <img src="/images/ai_pin_laser.png" alt="About" width="500px" />
+        </a>
+        <p>Their ethos, though, is to avoid addictive interfaces, to get back to physical world and only
+          use UI when you need it.
+        </p>
+        
+        <p>The voice and camera controls and are similar to the 
+          <a href="/glasses">Meta Ray-Bans glasses</a>
+          , you can ask your AI to 
+          look at what you're looking at, and do specific commands such as translating something your looking at.
+        </p>
+        <br>
+        
+        <img src="/images/ai_pin_rec.png" alt="About" width="600px" />
+        <p>Their site gives great examples of the use cases for the assistant, but, as the user, it's a bit hard
+          to keep track of them and what the capabilities are. In plain terms, it's confusing to 
+          even think of what to ask or request. 
+        </p>
+        <p>So is this most effectively a sexier GoPro x Apple Watch?</p>
+
+        <!-- comment section  -->
+        <div class="comment_section">
+        <div class="form-container">
+          <form method="GET" action="/send_ai-pin">
+            <div class="form-content">
+              <h2>What Do You Think?</h2>
+              <div class="type_sub">
+                <textarea class = "message-box" name="message" value="enter a message"></textarea>
+                <input
+                  type="submit"
+                  name="submitbutton"
+                  value="submit →"
+                />
+              </div>
+              <br>
+              
+            </div>
+          </form>
+        </div>
+
+        <div class="post-container" >
+            <% posts.forEach(post => { %>
+            <%= ' " ' + post.post +' " ' %>
+            <br>
+            <br>
+            <% }) %>
+        </div>
+      </div>
+        <!-- end comment section  -->
+      </div>
+    </div>
+  </body>
+</html>
