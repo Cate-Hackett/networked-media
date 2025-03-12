@@ -1,0 +1,155 @@
+<html>
+  <head>
+    <title>alternative interfaces</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mingzat&family=Pontano+Sans:wght@300..700&family=Zen+Kaku+Gothic+Antique&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="<%= bgClass %>" style="height: 170vh">
+    <%- include('header.ejs', { }); %>
+    
+    <div class="gallery-holder">
+      <div class="image-gallery">
+
+        <!-- BLACK AND WHITE PHONE PAGE-->
+
+          <div class="page_links">
+            
+            <a href="/b-w_phone" class="page_link_content">
+              <div class = "b-w-hover-intro">
+                <div class="b-w-intro-text">
+                <p>An E ink mobile device that maintains full functionality but avoids 
+                  extraneous visuals that are distracting. 
+                </p>
+                </div>
+                
+              </div>
+            <img
+              src="/images/minimal_mobile.png"
+              alt="B+W Phone"
+              class="phone-image"
+              style="max-width: 270; max-height: 190px"
+            />
+            <p>Black and White Phone</p>
+          </a>
+          </div>
+        
+        <!-- 3D MOUSE PAGE -->
+        
+          <div class="mouse_page_links">
+            <a href="/3d-mouse" class="mouse_page_link_content">
+              <div class = "mouse-hover-intro">
+                <div class="mouse-intro-text">
+                <p>Hardware-to-software innovation that allows you to 
+                  <em>feel</em> & interact with the
+                  pixels on the screen. 
+                </p>
+                </div>
+                
+              </div>
+            <img
+              src="/images/3d_mouse.png"
+              alt="3d Mouse"
+              class="phone-image"
+              style="max-width: 300; max-height: 300px"
+            />
+            <p>3d Mouse</p>
+          </a>
+          </div>
+        
+        <!-- AI PIN PAGE -->
+        <br />
+        
+          <div class="pin_page_links">
+            <a href="/ai-pin" class="pin_page_link_content">
+              <div class = "pin-hover-intro">
+                <div class="pin-intro-text">
+                <p> A small wearable that has most typical mobile functions, an AI assistant and laser
+                  projected interface.
+                </p>
+                </div>
+              </div>
+            <img
+              src="/images/ai-pin.png"
+              alt="AI Pin"
+              class="phone-image"
+              style="max-width: 250; max-height: 110px"
+            />
+            <p>AI Pin</p>
+          </a>
+          </div>
+        
+        <!-- TRIFOLD PHONE PAGE -->
+        
+          <div class="foldable_page_links">
+            <a href="/trifold" class="foldable_page_link_content">
+              <div class = "foldable-hover-intro">
+                <div class="foldable-intro-text">
+                <p> A tri-fold phone by TECNO in conversation among several other foldable devices.
+                </p>
+                </div>
+              </div>
+            <img
+              src="/images/trifold.png"
+              alt="Tri Fold"
+              class="phone-image"
+              style="max-width: 340; max-height: 350px"
+            />
+            <p>Tri Fold Phones</p>
+          </a>
+          </div>
+        
+        <br />
+        <!-- RAYBAN GLASSES PAGE -->
+        
+          <div class="glasses_page_links">
+            <a href="/glasses" class="glasses_page_link_content">
+              <div class = "glasses-hover-intro">
+                <div class="glasses-intro-text">
+                <p>Smart glasses equipped with cameras, mic and speaker, and integrated AI assistant
+                  that pairs with phone functionalities.
+                </p>
+                </div>
+              </div>
+            <img
+              src="/images/rayban.png"
+              alt="Rayban Meta Glasses"
+              class="phone-image"
+              style="max-width: 320px; max-height: 170px"
+            />
+            <p>Rayban Meta Glasses</p>
+          </a>
+          </div>
+        
+        <!-- APPLE LAMP PAGE -->
+        
+          <div class="lamp_page_links">
+            
+            <a href="/apple-lamp" class="lamp_page_link_content">
+              <!-- <div class="dark-overlay"></div> -->
+              <div class = "lamp-hover-intro">
+                <div class="lamp-intro-text">
+                <p>An experiment by Apple Research; a lamp - a non-anthropomorphic object - with 
+                  integrated intelligent anthropomorphic behaviors.
+                </p>
+                </div>
+              </div>
+            <img
+              src="/images/apple-lamp.png"
+              alt="Apple Lamp"
+              class="phone-image"
+              style="max-width: 380; max-height: 390px"
+            />
+            <p>Apple AI Lamp</p>
+          </a>
+          </div>
+        
+      </div>
+    </div>
+  </body>
+</html>
