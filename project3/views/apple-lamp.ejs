@@ -1,0 +1,140 @@
+<html>
+  <head>
+    <title>Apple AI Lamp</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mingzat&family=Pontano+Sans:wght@300..700&family=Zen+Kaku+Gothic+Antique&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="<%= bgClass %>">
+    <%- include('header.ejs', { }); %>
+
+    <div class="about-container">
+      <div class="about-content">
+        <h2>Apple's AI Lamp</h2>
+        <p>
+          
+          Content derived from
+          <a
+            href="https://www.cnet.com/tech/mobile/meta-ray-bans-6-months-later-the-best-ai-companion-happens-to-be-camera-glasses/"
+            >Yanko Design</a
+          >
+          <br />
+          By Sarang Sheth
+        </p>
+        <br>
+
+        <iframe
+          width="735"
+          height="415"
+          src="https://www.youtube.com/embed/iJtTfIj1Dd8"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+        <p>
+          "Apple’s latest experiment in robotics feels like a love letter to
+          Pixar’s Luxo Jr.
+        </p>
+        <p>
+          " Now, Apple’s researchers have taken that same playful, emotive
+          energy and brought it into a real-world robotic lamp, designed not
+          just to function, but to interact, express, and even entertain. "
+        </p>
+        <p>
+          "Researchers at Apple presented a paper titled ‘ELEGNT’ (Expressive
+          and Functional Movement Design for Non-Anthropomorphic Robot)."
+        </p>
+        <br />
+        <img
+          src="/images/lamp_interaction_model.jpg"
+          alt="About"
+          width="700px"
+        />
+        <br />
+        <p>
+          "Developed by Apple’s Machine Learning Research division, this robotic
+          lamp is more than an automated light source. It gestures, reacts, and
+          even sulks when it’s left behind. "
+        </p>
+        <br />
+        <img src="/images/lamp_dancing.gif" alt="About" width="700px" />
+        <br />
+        <p>
+          "A demonstration video shows it performing tasks in two modes:
+          'Functional,' where it simply executes commands, and 'Expressive,'
+          where it adds personality to its movements."
+        </p>
+        <br />
+        <img src="/images/remind_water.gif" alt="About" width="700px" />
+        <br />
+        <p>
+          "When it reminds a user to drink water, it nudges the glass
+          forward—not as a command, but as a gentle encouragement. These small
+          but thoughtful gestures tap into something deeply human: the way we
+          naturally ascribe personality to objects that behave in familiar
+          ways."
+        </p>
+
+        <p>
+          "People don’t just want machines that work—they want machines they can
+          connect with. A robot that can convey joy, hesitation, or even mild
+          disappointment is far more engaging than one that simply executes
+          tasks."
+        </p>
+        <br />
+        <img src="/images/lamp-use-cases.png" alt="About" width="850px" />
+        <br />
+        <p>
+          "Apple’s research aligns with earlier reports from Mark Gurman
+          suggesting the company is developing a home robot with an articulating
+          arm and an iPad-like interface. Speculated to launch by 2026 or 2027,
+          it could integrate with smart home systems and even act as a companion
+          device."
+        </p>
+        <p>
+          <strong
+            >"If Apple is serious about bringing robotics into consumer spaces,
+            this expressive lamp could be a glimpse of what’s to come."</strong
+          >
+        </p>
+
+        <!-- comment section  -->
+        <div class="comment_section">
+          <div class="form-container">
+            <form method="GET" action="/send_lamp">
+              <div class="form-content">
+                <h2>What Do You Think?</h2>
+                <div class="type_sub">
+                  <textarea class = "message-box" name="message" value="enter a message"></textarea>
+                  <input
+                    type="submit"
+                    name="submitbutton"
+                    value="submit →"
+                  />
+                </div>
+                <br>
+                
+              </div>
+            </form>
+          </div>
+  
+          <div class="post-container" >
+              <% posts.forEach(post => { %>
+              <%= ' " ' + post.post +' " ' %>
+              <br>
+              <br>
+              <% }) %>
+          </div>
+        </div>
+          <!-- end comment section  -->
+      </div>
+    </div>
+  </body>
+</html>
