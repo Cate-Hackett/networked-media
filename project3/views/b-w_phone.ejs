@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <title>E Ink Phone</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mingzat&family=Pontano+Sans:wght@300..700&family=Zen+Kaku+Gothic+Antique&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="<%= bgClass %>" >
+    <%- include('header.ejs', { }); %>
+
+    <div class="about-container">
+      <div class="about-content">
+        <h2>Black and White Phone</h2>
+        <br>
+        
+          <img src="/images/minimal_mobile.png" alt="About" width="260" />
+          <br>
+      
+          <p>
+          E ink is having a small come back. This black and white phone by 
+          <a href="https://minimalcompany.com/">minimal company</a>
+          is a dream for the digital minimalist.
+        </p>
+        <p>Its e ink display reduces eye strain and has a physical QWERTY keyboard - some features that really appeal
+          to physical / analog lovers. Yep, it's even got a headphone jack again. </p>
+        <br>
+        <img src="/images/minimal_d3.png" alt="About" width="380" />
+        <br />
+        <p>Ironic that Steve Jobs was proud to get rid of the mobile keyboard, since "you don't always need em"!
+          And here it is back?!
+        </p>
+        <p>The phone features the Google Play store and allows you to download any apps you need, all while 
+          emphasizing minimalism and only core features you need. 
+          </p>
+          <p>
+          Minimal company's mission is for phones
+          to simply be the tools they need to be, we don't need all that flashy stuff like color, do we?
+        </p>
+<br>
+
+        <img src="/images/minimal_v1.png" alt="About" width="350" />
+        <br>
+        <img src="/images/minimal_v2.png" alt="About" width="350" />
+        <br>
+        <p>Don't worry, you're not buying an e-reader though, it still includes most "high tech" aspects of 
+          smartphones we look for, it has fingerprint unlock on the power button (novel right?), camera and flash...
+        </p>
+        <br>
+        <img src="/images/minimal_d2.png" alt="About" width="400" />
+        <br>
+        <img src="/images/minimal_d1.png" alt="About" width="400"/>
+        <br>
+       <p>Is this a glorious balance of high tech and low tech? Or 
+        <em>just</em>
+         low tech?</p>
+        <p>This seems like a good combat to phone addiction, and $400 for pre-order isn't too bad - considered me persuaded?! 
+          Worth a try?
+        </p>
+        <!-- comment section  -->
+        <div class="comment_section">
+          <div class="form-container">
+            <form method="GET" action="/send">
+              <div class="form-content">
+                <h2 class="commentQ">What Do You Think?</h2>
+                <div class="type_sub">
+                  <textarea class = "message-box" name="message" value="enter a message"></textarea>
+                  <input
+                    type="submit"
+                    name="submitbutton"
+                    value="submit →"
+                  />
+                </div>
+                <br>
+                
+              </div>
+            </form>
+          </div>
+  
+          <div class="post-container" >
+              <% posts.forEach(post => { %>
+              <%= ' " ' + post.post +' " ' %>
+              <br>
+              <br>
+              <% }) %>
+          </div>
+        </div>
+          <!-- end comment section  -->
+      </div>
+    </div>
+  </body>
+</html>
