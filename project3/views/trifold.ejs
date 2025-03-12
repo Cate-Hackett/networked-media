@@ -1,0 +1,132 @@
+<html>
+  <head>
+    <title>Trifold</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mingzat&family=Pontano+Sans:wght@300..700&family=Zen+Kaku+Gothic+Antique&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="<%= bgClass %>">
+    <%- include('header.ejs', { }); %>
+
+    <div class="about-container">
+      <div class="about-content">
+        <h2>Folding Devices</h2>
+        <p>
+        
+          Content derived from
+          <a
+            href="https://www.yankodesign.com/2025/02/13/tri-fold-phantom-ultimate-2-concept-and-tecnos-ai-innovation-take-center-stage-at-mwc-2025/"
+            >Yanko Design</a
+          >
+          <br />
+          By Vincent Nguyen
+        </p>
+        <br>
+        <iframe
+          width="636"
+          height="358"
+          src="https://www.youtube.com/embed/qxkNq49lqr8"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+        <br />
+        <p>
+          "TECNO’s PHANTOM Ultimate 2 is gearing up to be the headline stealer
+          at MWC 2025, positioning itself as the boldest entry in the foldable
+          smartphone category."
+         
+        </p>
+        <br>
+        <img src="/images/trifolded.jpg" alt="About" width="500px" />
+        <br />
+
+        <p>
+          "This ultra-thin tri-fold concept smartphone challenges conventional
+          designs, expecting to feature a massive screen experience in a device
+          that remains effortlessly portable."
+        </p>
+        <br />
+        <img src="/images/tri-in-use.jpg" alt="About" width="500px" />
+        <br />
+        <p>
+          "The tri-fold mechanism introduces a level of flexibility that
+          traditional clamshells and book-style foldables can’t match. This
+          three-panel design allows for multiple configurations, adapting to
+          users’ needs, whether for multitasking, media consumption, or
+          professional productivity."
+        </p>
+        <br />
+        <img src="/images/tri-tent.png" alt="About" width="500px" />
+        <br />
+        <img src="/images/tri-being-used2.png" alt="About" width="500px" />
+        <p>
+          "The industry has long scrutinized the challenges of durability, hinge
+          complexity, and display longevity, and I’m eager to see how TECNO’s
+          PHANTOM Ultimate 2 tackles these concerns."
+        </p>
+        
+        <p>
+          It's clear the industry is having fun playing with foldables. As
+          Nguyen mentioned, we've got book-style and v fold mobile devices that
+          TECNO has also released:
+        </p>
+        <img src="/images/book-flip.jpg" alt="About" width="450px" />
+        <p>TECNO PHANTOM V Fold</p>
+        <img src="/images/v-flip.jpg" alt="About" width="450px" />
+        <p>TECNO PHANTOM V Flip</p>
+        <p>Not to mention, the rumors about
+          <a href="https://www.yankodesign.com/2025/02/10/a-foldable-display-macbook-in-2027-apple-supply-chain-shows-a-whole-catalog-of-foldable-devices/">foldable macs</a>
+            from Apple:</p>
+            <img src="/images/foldable_macbook.png" alt="About" width="750px" />
+
+        <p>The foldable / extended mac screen could especially be a game-changer when it comes to dynamic controls, 
+           but also seems to do away with hardware...</p>
+        <p>The opportunity to have a multi-monitor type of mobile set up is one thing - 
+          this concept of foldable mobiles that turn into semi-tablets enabling 
+          agile work instead of bringing multiple devices with you is quite intriguing...
+        </p>
+        <p>But doubtful to replace our desktops, right? Especially for extended periods of working?
+          The feeling of the keyboard... That little raised indicator on F and J 
+          keys for muscle memory.. !!</p>
+        
+        <!-- comment section  -->
+        <div class="comment_section">
+          <div class="form-container">
+            <form method="GET" action="/send_trifold">
+              <div class="form-content">
+                <h2>What Do You Think?</h2>
+                <div class="type_sub">
+                  <textarea class = "message-box" name="message" value="enter a message"></textarea>
+                  <input
+                    type="submit"
+                    name="submitbutton"
+                    value="submit →"
+                  />
+                </div>
+                <br>
+                
+              </div>
+            </form>
+          </div>
+  
+          <div class="post-container" >
+              <% posts.forEach(post => { %>
+              <%= ' " ' + post.post +' " ' %>
+              <br>
+              <br>
+              <% }) %>
+          </div>
+        </div>
+          <!-- end comment section  -->
+      </div>
+    </div>
+  </body>
+</html>
