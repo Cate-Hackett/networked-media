@@ -1,0 +1,86 @@
+
+<html>
+    <head>
+        <title>MoodCoin</title>
+        <link href="/style.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        
+
+    </head>
+    
+    <body>
+        <%- include('nav.ejs') %>
+        <%- include('logout.ejs') %>
+
+        <div class="rest">
+ <div class="personalpage2">
+<div class="yourStock">
+          <h1> Your Stock </h1>
+        <div class='personalll'>
+        
+          
+          <p>Enter your own stock data below. No APIs, just your story in numbers.</p>
+
+
+          <label for="date">How do you feel today?</label>
+          <input type="date" id="date" required>
+          <label for="price">Mood:</label>
+          <input type="number" id="price" step="1" min= "0" max = "100" required>
+          <button onclick="addData(); location.reload();">Add Data</button>
+          <button onclick="resetChart(); location.reload();">Reset</button>
+            
+          
+          
+          
+          <div style="display:none;">
+              <canvas id="stockChart" width="200" height="100" style="max-height: 20; max-width: 10;"></canvas>
+            </div>
+              <a href="/specificstock" id="chartLink">
+                <div class="personalll">
+                <canvas id="personalStockChart"></canvas>
+                </div>
+              </a>
+          </div>
+</div>
+            <div class="investmentsDiv">
+            <h1>Your investments</h1>
+            <div class="investmentsDiv">
+            <div class="investments">
+              <div class="iCharts">
+                <h2>Your first Investment!</h2>
+
+                <canvas id="personalStockChart5" style="max-height: 400px; max-width: 400;"></canvas> 
+              
+              </div>
+              <div class="iCharts">
+                <h2>Your second Investment!</h2>
+                <canvas id="personalStockChart2" style="max-height: 400px; max-width: 400;"></canvas>
+              </div>
+            </div>
+
+              <div class="investments">
+              <div class="iCharts">
+                <h2>Your third Investment!</h2>
+                <canvas id="personalStockChart3" style="max-height: 400px; max-width: 400;"></canvas>
+
+              </div>
+              <div class="iCharts">
+                <h2>Your fourth Investment!</h2>
+                <canvas id="personalStockChart4" style="max-height: 400px; max-width: 400;"></canvas>
+
+              </div>
+               </div>
+              </div>
+
+
+          </div>
+        </div>
+    
+
+    
+     </div>
+     <script src="script.js"></script>
+
+    </body>
+</html>

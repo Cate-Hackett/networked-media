@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>MoodCoin</title>
+        <link href="style.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="search-container">
+    <%- include('nav.ejs') %>
+    
+
+    <div class='rest'>
+      <h1 style="font-size: 60px; margin-top: 20px" >Search a Mood Stock</h1>
+      <input type="text" id="search">
+      <button onclick="searchU();">search</button>
+
+      <div>
+        <a  id="chartLink">
+          <canvas class ="chartLink" id="searchStock" width="200" height="100"></canvas>
+        </a>
+
+        <button class='searchButton'id="followButton" onclick="followUserFromSearch()" style="display: none;">Follow User</button>      
+
+      </div>
+
+
+    </div>
+    </div>
+      <script src="script.js"></script>
+
+  </body>
+    </html>

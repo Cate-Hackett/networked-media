@@ -1,0 +1,22 @@
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+</head>
+
+
+<div class="nav">
+    <a href="/">
+        <img src="uploads/<%= activeRoute === '/' ? 'home_selected.png' : 'home_unselected.png' %>" alt="Home" style="width:30px; height:30px;">
+      </a>
+    
+      <a href="/search">
+        <img src="uploads/<%= activeRoute === '/search' ? 'search_selected.png' : 'search_unselected.png' %>" alt="Search" style="width:30px; height:30px;">
+      </a>
+    
+      <a href="/personalstock">
+        <img src="uploads/<%= activeRoute === '/personalstock' ? 'profile_selected.png' : 'profile_unselected.png' %>" alt="Profile" style="width:30px; height:30px;">
+      </a>
+    
+    
+</div>
